@@ -71,8 +71,16 @@
     <xsl:text>]</xsl:text>
 </xsl:template>
 
+<xsl:template match="cm:image">
+    <xsl:text>#box(image("</xsl:text>
+    <xsl:value-of select="@destination"/>
+    <xsl:text>",alt:"</xsl:text>
+    <xsl:value-of select="./cm:text"/>
+    <xsl:text>"))</xsl:text>
+</xsl:template>
+
 <xsl:template match="cm:thematic_break">
-    <xsl:text>#line(start:(0%+0pt,0%+0pt),length:100%)</xsl:text>
+    <xsl:text>#line(start:(0%+0pt,0%+0pt),length:100%)&#10;</xsl:text>
 </xsl:template>
 
 <xsl:template match="cm:strong">

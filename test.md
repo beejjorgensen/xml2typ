@@ -12,6 +12,8 @@ There's a horizontal rule below this:
 
 --------
 
+And here is a cat image: ![cat image](cat.png "cat image title")
+
 This is **bold**. And this is normal.
 
 This is *italic*. And this is normal.
@@ -119,7 +121,7 @@ A table:
 |*123*         |    *ABC*     |         *DEF*|*456*         |
 |**123**       |   **ABC**    |       **DEF**|**456**       |
 
-This paragraph uses embedded typst to make this next word
+This paragraph uses embedded Typst to make this next word
 #strong[strong].
 
 And a closing paragraph.

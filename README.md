@@ -57,7 +57,7 @@ it's generally ignored by `cmark`.
 |Block quotes   | ✔️ |                                                |
 |Horizontal rule| ✔️ |                                                |
 |Strike-through | ✔️ |                                                |
-|Images         | ❌ |                                                |
+|Images         | ✔️ |                                                |
 |Footnotes      | ❌ |XML is broken for footnotes                     |
 
 ## Pandoc does this, you know...
