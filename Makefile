@@ -14,9 +14,14 @@ $(NAME).typ: $(NAME).xml
 $(NAME).pdf: $(NAME).typ
 	typst compile $^
 
+quick.pdf: $(NAME).md
+	cmark-gfm -e table -e strikethrough -t xml $^ | \
+		xsltproc --novalid $(XSLT) - | \
+		typst compile - $@
+
 clean:
 	rm -f $(NAME).xml $(NAME).typ
 
 pristine: clean
-	rm -f $(NAME).pdf
+	rm -f $(NAME).pdf quick.pdf
 
