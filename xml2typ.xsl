@@ -42,8 +42,10 @@
 </xsl:template>
 
 <xsl:template match="cm:paragraph">
+    <xsl:text>#par[</xsl:text>
     <xsl:apply-templates/>
-    <xsl:text>&#10;&#10;</xsl:text>
+    <xsl:text>]</xsl:text>
+    <xsl:text>&#10;</xsl:text>
 </xsl:template>
 
 <xsl:template match="cm:emph">
@@ -86,31 +88,36 @@
         <xsl:when test="@type='bullet'">
             <xsl:call-template name="bullet-list"/>
         </xsl:when>
-        <xsl:otherwise>
-            <!-- fallback -->
-            <xsl:apply-templates/>
-        </xsl:otherwise>
     </xsl:choose>
 </xsl:template>
 
 <xsl:template name="ordered-list">
+    <xsl:text>#enum(tight:</xsl:text>
+    <xsl:value-of select="@tight"/>
+    <xsl:text>,&#10;</xsl:text>
+        
     <xsl:variable name="start" select="@start"/>
     <xsl:for-each select="cm:item">
+        <xsl:text>  enum.item(</xsl:text>
         <xsl:value-of select="position() + $start - 1"/>
-        <xsl:text>. </xsl:text>
+        <xsl:text>)[</xsl:text>
         <xsl:apply-templates/>
-        <xsl:text>&#10;</xsl:text>
+        <xsl:text>],&#10;</xsl:text>
     </xsl:for-each>
-    <xsl:text>&#10;</xsl:text>
+    <xsl:text>)&#10;</xsl:text>
 </xsl:template>
 
 <xsl:template name="bullet-list">
+    <xsl:text>#list(tight:</xsl:text>
+    <xsl:value-of select="@tight"/>
+    <xsl:text>,&#10;</xsl:text>
+        
     <xsl:for-each select="cm:item">
-        <xsl:text>- </xsl:text>
+        <xsl:text>[</xsl:text>
         <xsl:apply-templates/>
-        <xsl:text>&#10;</xsl:text>
+        <xsl:text>],&#10;</xsl:text>
     </xsl:for-each>
-    <xsl:text>&#10;</xsl:text>
+    <xsl:text>)&#10;</xsl:text>
 </xsl:template>
 
 <!-- Vacuum up all inter-tag whitespace -->
@@ -118,6 +125,7 @@
     parent::cm:heading or
     parent::cm:paragraph or
     parent::cm:strong or
-    parent::cm:emph]"/>
+    parent::cm:emph or
+    parent::cm:item]"/>
 
 </xsl:stylesheet>

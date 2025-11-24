@@ -42,10 +42,10 @@ it's generally ignored by `cmark`.
 |Bold           | ✔️ |                                               |
 |Bold Italics   | ✔️ |                                               |
 |Code           | ✔️ |                                               |
-|Code Block     | ✔️ |                                               |
+|Code Block     | ✔️ |With syntax highlighting                       |
 |Line break     | ✔️ |                                               |
-|Ordered Lists  | ⏳ |Spacing is messed up                           |
-|Unordered Lists| ⏳ |Spacing is messed up                           |
+|Ordered Lists  | ✔️ |                                               |
+|Unordered Lists| ✔️ |                                               |
 |Tables         | ❌ |                                               |
 |Footnotes      | ❌ |XML output from `cmark` is broken for footnotes|
 

@@ -55,6 +55,40 @@ Unnumbered list:
 * Unnumbered list 2
 * Unnumbered list 3
 
+Loose unnumbered list:
+
+* Unnumbered list 1
+
+  And a second paragraph for 1
+
+* Unnumbered list 2
+
+  And a second paragraph for 2
+
+* Unnumbered list 3
+
+  And a second paragraph for 3
+
+And some nesting:
+
+* Outer 1
+  * Inner 1.1
+  * Inner 1.2
+    * Inner 1.2.1
+    * Inner 1.2.2
+  * Inner 1.3
+* Outer 2
+  * Inner 2.1
+  * Inner 2.1
+
+And mixing:
+
+* Outer bullet 1
+  1. Inner numbered!
+     * Inner inner bullet!
+  2. Inner numbered 2!
+* Outer bullet 2
+
 A table:
 
 |Left header|Center Header|Right header|
@@ -72,30 +106,27 @@ And a closing paragraph.
 
 # Header 1
 
-Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+And more embedded Typst to make this: #lorem(30) 
 
-lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+#lorem(30)
 
 ## Header 2
 
-Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+#lorem(30)
 
 ### Header 3
 
-Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+#lorem(30)
 
 #### Header 4
 
-Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+#lorem(30)
 
 ##### Header 5
 
-Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+#lorem(30)
 
 ###### Header 6
 
-Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+#lorem(30)
 
