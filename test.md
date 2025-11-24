@@ -2,6 +2,8 @@
 
 This is normal. And this is normal.
 
+This is ~~strike-through~~. And this is normal.
+
 This is a [link to a website](https://example.com).
 
 This is `code` (inline). And this is normal.

@@ -56,7 +56,7 @@ it's generally ignored by `cmark`.
 |Links          | ✔️ |URL only; XML missing internal link destinations|
 |Block quotes   | ✔️ |                                                |
 |Horizontal rule| ✔️ |                                                |
-|Strike-through | ❌ |                                                |
+|Strike-through | ✔️ |                                                |
 |Images         | ❌ |                                                |
 |Footnotes      | ❌ |XML is broken for footnotes                     |
 

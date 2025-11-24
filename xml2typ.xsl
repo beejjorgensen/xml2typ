@@ -65,6 +65,12 @@
     <xsl:text>_</xsl:text>
 </xsl:template>
 
+<xsl:template match="cm:strikethrough">
+    <xsl:text>#strike[</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>]</xsl:text>
+</xsl:template>
+
 <xsl:template match="cm:thematic_break">
     <xsl:text>#line(start:(0%+0pt,0%+0pt),length:100%)</xsl:text>
 </xsl:template>
