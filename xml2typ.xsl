@@ -78,6 +78,41 @@
     <xsl:text>```&#10;</xsl:text>
 </xsl:template>
 
+<xsl:template match="cm:list">
+    <xsl:choose>
+        <xsl:when test="@type='ordered'">
+            <xsl:call-template name="ordered-list"/>
+        </xsl:when>
+        <xsl:when test="@type='bullet'">
+            <xsl:call-template name="bullet-list"/>
+        </xsl:when>
+        <xsl:otherwise>
+            <!-- fallback -->
+            <xsl:apply-templates/>
+        </xsl:otherwise>
+    </xsl:choose>
+</xsl:template>
+
+<xsl:template name="ordered-list">
+    <xsl:variable name="start" select="@start"/>
+    <xsl:for-each select="cm:item">
+        <xsl:value-of select="position() + $start - 1"/>
+        <xsl:text>. </xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text>&#10;</xsl:text>
+    </xsl:for-each>
+    <xsl:text>&#10;</xsl:text>
+</xsl:template>
+
+<xsl:template name="bullet-list">
+    <xsl:for-each select="cm:item">
+        <xsl:text>- </xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text>&#10;</xsl:text>
+    </xsl:for-each>
+    <xsl:text>&#10;</xsl:text>
+</xsl:template>
+
 <!-- Vacuum up all inter-tag whitespace -->
 <xsl:template match="text()[parent::cm:document or
     parent::cm:heading or

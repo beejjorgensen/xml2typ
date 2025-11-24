@@ -44,8 +44,8 @@ it's generally ignored by `cmark`.
 |Code           | ✔️ |                                               |
 |Code Block     | ✔️ |                                               |
 |Line break     | ✔️ |                                               |
-|Ordered Lists  | ❌ |                                               |
-|Unordered Lists| ❌ |                                               |
+|Ordered Lists  | ⏳ |Spacing is messed up                           |
+|Unordered Lists| ⏳ |Spacing is messed up                           |
 |Line break     | ❌ |                                               |
 |Tables         | ❌ |                                               |
 |Footnotes      | ❌ |XML output from `cmark` is broken for footnotes|
