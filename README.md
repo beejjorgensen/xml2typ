@@ -27,6 +27,12 @@ demo.
 
 There is no install script. It's up to you where to drop these things.
 
+Dependencies:
+
+* `cmark-gfm` (or the lesser `cmark`—just change the `Makefile`)
+* `xsltproc`
+* `typst`
+
 ## Embedded Typst
 
 To a certain extent, you can embed raw Typst into the Markdown since
