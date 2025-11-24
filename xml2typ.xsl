@@ -64,6 +64,14 @@
     <xsl:text>*</xsl:text>
 </xsl:template>
 
+<xsl:template match="cm:link">
+    <xsl:text>#link("</xsl:text>
+    <xsl:value-of select="@destination"/>
+    <xsl:text>")[</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>]</xsl:text>
+</xsl:template>
+
 <xsl:template match="cm:text">
     <xsl:apply-templates/>
 </xsl:template>

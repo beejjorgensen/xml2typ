@@ -1,13 +1,14 @@
 NAME=test
 XSLT=xml2typ.xsl
 XSLT_PARAMS=--stringparam table_header_align yes --stringparam table_header_bold yes
+CMARK_PARAMS=-e table -e strikethrough -e autolink
 
 .PHONY: all clean pristine
 
 all: $(NAME).pdf
 
 $(NAME).xml: $(NAME).md
-	cmark-gfm -e table -e strikethrough -t xml $^ > $@
+	cmark-gfm $(CMARK_PARAMS) -t xml $^ > $@
 
 $(NAME).typ: $(NAME).xml
 	xsltproc --novalid $(XSLT_PARAMS) -o $@ $(XSLT) $^
@@ -16,7 +17,7 @@ $(NAME).pdf: $(NAME).typ
 	typst compile $^
 
 quick.pdf: $(NAME).md
-	cmark-gfm -e table -e strikethrough -t xml $^ | \
+	cmark-gfm $(CMARK_PARAMS) -t xml $^ | \
 		xsltproc --novalid $(XSLT_PARAMS) $(XSLT) - | \
 		typst compile - $@
 

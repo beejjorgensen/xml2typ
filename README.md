@@ -41,22 +41,22 @@ it's generally ignored by `cmark`.
 ## Features
 <!-- ✔️⏳❌ -->
 
-|Feature       |State|Notes                                         |
-|---------------|:-:|-----------------------------------------------|
-|Headers        | ✔️ |                                               |
-|Italics        | ✔️ |                                               |
-|Bold           | ✔️ |                                               |
-|Bold Italics   | ✔️ |                                               |
-|Code           | ✔️ |                                               |
-|Code Block     | ✔️ |With syntax highlighting                       |
-|Line break     | ✔️ |                                               |
-|Ordered Lists  | ✔️ |                                               |
-|Unordered Lists| ✔️ |                                               |
-|Tables         | ✔️ |                                               |
-|Links          | ❌ |                                               |
+|Feature       |State|Notes                                          |
+|---------------|:-:|------------------------------------------------|
+|Headers        | ✔️ |                                                |
+|Italics        | ✔️ |                                                |
+|Bold           | ✔️ |                                                |
+|Bold Italics   | ✔️ |                                                |
+|Code           | ✔️ |                                                |
+|Code Block     | ✔️ |With syntax highlighting                        |
+|Line break     | ✔️ |                                                |
+|Ordered Lists  | ✔️ |                                                |
+|Unordered Lists| ✔️ |                                                |
+|Tables         | ✔️ |Parameters to control header format             |
+|Links          | ✔️ |URL only; XML missing internal link destinations|
 |Block quotes   | ❌ |                                               |
 |Images         | ❌ |                                               |
-|Footnotes      | ❌ |XML output from `cmark` is broken for footnotes|
+|Footnotes      | ❌ |XML is broken for footnotes                    |
 
 ## Pandoc does this, you know...
 
