@@ -66,6 +66,10 @@
     <xsl:text> </xsl:text>
 </xsl:template>
 
+<xsl:template match="cm:linebreak">
+    <xsl:text>\&#10;</xsl:text>
+</xsl:template>
+
 <xsl:template match="cm:code_block">
     <xsl:text>```</xsl:text>
     <xsl:value-of select="@info"/>

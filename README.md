@@ -43,6 +43,7 @@ it's generally ignored by `cmark`.
 |Bold Italics   | ✔️ |                                               |
 |Code           | ✔️ |                                               |
 |Code Block     | ✔️ |                                               |
+|Line break     | ✔️ |                                               |
 |Ordered Lists  | ❌ |                                               |
 |Unordered Lists| ❌ |                                               |
 |Line break     | ❌ |                                               |
