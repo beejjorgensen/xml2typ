@@ -72,6 +72,12 @@
     <xsl:text>\&#10;</xsl:text>
 </xsl:template>
 
+<xsl:template match="cm:code">
+    <xsl:text>`</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>`</xsl:text>
+</xsl:template>
+
 <xsl:template match="cm:code_block">
     <xsl:text>```</xsl:text>
     <xsl:value-of select="@info"/>
@@ -120,10 +126,38 @@
     <xsl:text>)&#10;</xsl:text>
 </xsl:template>
 
+<xsl:template match="cm:table">
+    <xsl:text>#table(columns:</xsl:text>
+    <xsl:value-of select="count(cm:table_header/cm:table_cell)"/>
+    <xsl:text>,&#10;</xsl:text>
+        <xsl:apply-templates/>
+    <xsl:text>)&#10;</xsl:text>
+</xsl:template>
+
+<xsl:template match="cm:table_header">
+    <xsl:text>table.header(</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>),</xsl:text>
+</xsl:template>
+
+<xsl:template match="cm:table_row">
+    <xsl:apply-templates/>
+</xsl:template>
+
+<xsl:template match="cm:table_cell">
+    <xsl:text>[</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>],</xsl:text>
+</xsl:template>
+
 <!-- Vacuum up all inter-tag whitespace -->
 <xsl:template match="text()[parent::cm:document or
     parent::cm:heading or
     parent::cm:paragraph or
+    parent::cm:table or
+    parent::cm:table_header or
+    parent::cm:table_row or
+    parent::cm:table_cell or
     parent::cm:strong or
     parent::cm:emph or
     parent::cm:item]"/>

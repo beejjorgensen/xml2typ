@@ -46,7 +46,7 @@ it's generally ignored by `cmark`.
 |Line break     | ✔️ |                                               |
 |Ordered Lists  | ✔️ |                                               |
 |Unordered Lists| ✔️ |                                               |
-|Tables         | ❌ |                                               |
+|Tables         | ⏳ |Alignment not working                          |
 |Footnotes      | ❌ |XML output from `cmark` is broken for footnotes|
 
 ## Pandoc does this, you know...
