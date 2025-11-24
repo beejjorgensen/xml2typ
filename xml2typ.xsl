@@ -137,15 +137,33 @@
 <xsl:template match="cm:table_header">
     <xsl:text>table.header(</xsl:text>
     <xsl:apply-templates/>
-    <xsl:text>),</xsl:text>
+    <xsl:text>),&#10;</xsl:text>
 </xsl:template>
 
 <xsl:template match="cm:table_row">
     <xsl:apply-templates/>
+    <xsl:text>&#10;</xsl:text>
 </xsl:template>
 
-<xsl:template match="cm:table_cell">
+<xsl:template match="cm:table_header/cm:table_cell">
     <xsl:text>[</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>],</xsl:text>
+</xsl:template>
+
+<xsl:template match="cm:table_row/cm:table_cell">
+    <xsl:variable name="pos" select="count(preceding-sibling::cm:table_cell) + 1"/>
+    <xsl:variable name="headerCell" select="../../cm:table_header/cm:table_cell[$pos]"/>
+    <xsl:variable name="align" select="string($headerCell/@align)"/>
+    <xsl:variable name="effectiveAlign">
+        <xsl:choose>
+            <xsl:when test="$align"><xsl:value-of select="$align"/></xsl:when>
+            <xsl:otherwise>left</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:text>table.cell(align:</xsl:text>
+    <xsl:value-of select="$effectiveAlign"/>
+    <xsl:text>)[</xsl:text>
     <xsl:apply-templates/>
     <xsl:text>],</xsl:text>
 </xsl:template>
