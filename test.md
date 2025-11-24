@@ -6,6 +6,10 @@ This is a [link to a website](https://example.com).
 
 This is `code` (inline). And this is normal.
 
+There's a horizontal rule below this:
+
+--------
+
 This is **bold**. And this is normal.
 
 This is *italic*. And this is normal.
