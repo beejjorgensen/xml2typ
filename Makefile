@@ -1,5 +1,5 @@
 NAME=test
-XSLT=xmltyp.xsl
+XSLT=xml2typ.xsl
 
 .PHONY: all clean pristine
 
