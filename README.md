@@ -31,16 +31,11 @@ There is no install script. It's up to you where to drop these things.
 
 |Task          |State|Notes                                         |
 |---------------|:-:|-----------------------------------------------|
-|Header 1       | ✔️ |                                               |
-|Header 2       | ✔️ |                                               |
+|Header         | ✔️ |                                               |
 |Italics        | ✔️ |                                               |
 |Bold           | ✔️ |                                               |
 |Code           | ✔️ |                                               |
 |Code Block     | ⏳ |No syntax highlighting                         |
-|Header 3       | ❌ |                                               |
-|Header 4       | ❌ |                                               |
-|Header 5       | ❌ |                                               |
-|Header 6       | ❌ |                                               |
 |Bold Italics   | ❌ |                                               |
 |Ordered Lists  | ❌ |                                               |
 |Unordered Lists| ❌ |                                               |

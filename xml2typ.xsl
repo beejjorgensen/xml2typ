@@ -6,6 +6,19 @@
 
 <xsl:output method="text" encoding="UTF-8" />
 
+<!-- Repeat a character a number of times -->
+<xsl:template name="repchar">
+    <xsl:param name="char"/>
+    <xsl:param name="count"/>
+    <xsl:if test="$count &gt; 0">
+        <xsl:value-of select="$char"/>
+        <xsl:call-template name="repchar">
+            <xsl:with-param name="char" select="$char"/>
+            <xsl:with-param name="count" select="$count - 1"/>
+        </xsl:call-template>
+    </xsl:if>
+</xsl:template>
+
 <xsl:include href="header.xsl"/>
 
 <xsl:template match="/cm:document">
@@ -18,14 +31,12 @@
 <xsl:apply-templates/>
 </xsl:template>
 
-<xsl:template match="cm:heading[@level=1]">
-    <xsl:text>= </xsl:text>
-    <xsl:apply-templates/>
-    <xsl:text>&#10;&#10;</xsl:text>
-</xsl:template>
-
-<xsl:template match="cm:heading[@level=2]">
-    <xsl:text>== </xsl:text>
+<xsl:template match="cm:heading">
+    <xsl:call-template name="repchar">
+        <xsl:with-param name="char" select="'='"/>
+        <xsl:with-param name="count" select="@level"/>
+    </xsl:call-template>
+    <xsl:text> </xsl:text>
     <xsl:apply-templates/>
     <xsl:text>&#10;&#10;</xsl:text>
 </xsl:template>
