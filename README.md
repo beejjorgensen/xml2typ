@@ -54,3 +54,13 @@ it's generally ignored by `cmark`.
 Yes, but via LaTeX and it's a lot slower. This is an experiment for
 funzies.
 
+For a taste, my 2017 MacBook Pro (Linux) builds the test page in around
+120 milliseconds:
+
+```
+% time make quick.pdf
+cmark-gfm -e table -e strikethrough -t xml test.md | \
+	xsltproc --novalid xml2typ.xsl - | \
+	typst compile - quick.pdf
+make quick.pdf  0.09s user 0.03s system 107% cpu 0.112 total
+```
