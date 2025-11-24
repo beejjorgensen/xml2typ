@@ -52,6 +52,13 @@
     <xsl:text>&#10;</xsl:text>
 </xsl:template>
 
+<xsl:template match="cm:block_quote">
+    <xsl:text>#quote(block:true)[</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>]</xsl:text>
+    <xsl:text>&#10;</xsl:text>
+</xsl:template>
+
 <xsl:template match="cm:emph">
     <xsl:text>_</xsl:text>
     <xsl:apply-templates/>
@@ -196,6 +203,7 @@
 <xsl:template match="text()[parent::cm:document or
     parent::cm:heading or
     parent::cm:paragraph or
+    parent::cm:block_quote or
     parent::cm:table or
     parent::cm:table_header or
     parent::cm:table_row or

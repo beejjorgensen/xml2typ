@@ -54,7 +54,8 @@ it's generally ignored by `cmark`.
 |Unordered Lists| ✔️ |                                                |
 |Tables         | ✔️ |Parameters to control header format             |
 |Links          | ✔️ |URL only; XML missing internal link destinations|
-|Block quotes   | ❌ |                                               |
+|Block quotes   | ✔️ |                                               |
+|Horizontal rule| ❌ |                                               |
 |Images         | ❌ |                                               |
 |Footnotes      | ❌ |XML is broken for footnotes                    |
 
