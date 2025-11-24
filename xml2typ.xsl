@@ -202,6 +202,7 @@
     parent::cm:table_cell or
     parent::cm:strong or
     parent::cm:emph or
+    parent::cm:link or
     parent::cm:item]"/>
 
 </xsl:stylesheet>
