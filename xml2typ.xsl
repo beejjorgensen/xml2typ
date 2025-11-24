@@ -67,7 +67,9 @@
 </xsl:template>
 
 <xsl:template match="cm:code_block">
-    <xsl:text>```&#10;</xsl:text>
+    <xsl:text>```</xsl:text>
+    <xsl:value-of select="@info"/>
+    <xsl:text>&#10;</xsl:text>
     <xsl:apply-templates/>
     <xsl:text>```&#10;</xsl:text>
 </xsl:template>

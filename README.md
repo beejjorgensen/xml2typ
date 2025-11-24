@@ -33,17 +33,19 @@ To a certain extent, you can embed raw Typst into the Markdown since
 it's generally ignored by `cmark`.
 
 ## Checklist
+<!-- ✔️⏳❌ -->
 
 |Task          |State|Notes                                         |
 |---------------|:-:|-----------------------------------------------|
-|Header         | ✔️ |                                               |
+|Headers        | ✔️ |                                               |
 |Italics        | ✔️ |                                               |
 |Bold           | ✔️ |                                               |
 |Bold Italics   | ✔️ |                                               |
 |Code           | ✔️ |                                               |
-|Code Block     | ⏳ |No syntax highlighting                         |
+|Code Block     | ✔️ |                                               |
 |Ordered Lists  | ❌ |                                               |
 |Unordered Lists| ❌ |                                               |
+|Line break     | ❌ |                                               |
 |Tables         | ❌ |                                               |
 |Footnotes      | ❌ |XML output from `cmark` is broken for footnotes|
 

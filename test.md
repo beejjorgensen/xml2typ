@@ -11,11 +11,33 @@ This is *italic*. And this is normal.
 This is ***bold italic***. And this is normal.
 
 ```rust
-// This is a code block
+// This is a Rust code block
 
 fn main() {
     println!("Hello, world!");
 }
+```
+
+And this is an intervening paragraph.
+
+```c
+// This is a C code block
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("Hello, world!\n");
+}
+```
+
+And this is another intervening paragraph.
+
+```
+This is a code block but without
+any syntax highlighting.
+
+Just to try it.
 ```
 
 There is a break right here\
