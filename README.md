@@ -32,10 +32,10 @@ There is no install script. It's up to you where to drop these things.
 To a certain extent, you can embed raw Typst into the Markdown since
 it's generally ignored by `cmark`.
 
-## Checklist
+## Features
 <!-- ✔️⏳❌ -->
 
-|Task          |State|Notes                                         |
+|Feature       |State|Notes                                         |
 |---------------|:-:|-----------------------------------------------|
 |Headers        | ✔️ |                                               |
 |Italics        | ✔️ |                                               |
@@ -46,7 +46,6 @@ it's generally ignored by `cmark`.
 |Line break     | ✔️ |                                               |
 |Ordered Lists  | ⏳ |Spacing is messed up                           |
 |Unordered Lists| ⏳ |Spacing is messed up                           |
-|Line break     | ❌ |                                               |
 |Tables         | ❌ |                                               |
 |Footnotes      | ❌ |XML output from `cmark` is broken for footnotes|
 
