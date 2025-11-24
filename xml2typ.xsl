@@ -6,6 +6,10 @@
 
 <xsl:output method="text" encoding="UTF-8" />
 
+
+<xsl:param name="table_header_bold" select="'no'"/>
+<xsl:param name="table_header_align" select="'no'"/>
+
 <!-- Repeat a character a number of times -->
 <xsl:template name="repchar">
     <xsl:param name="char"/>
@@ -146,9 +150,21 @@
 </xsl:template>
 
 <xsl:template match="cm:table_header/cm:table_cell">
+    <xsl:if test="$table_header_align='yes'">
+        <xsl:text>align(</xsl:text>
+        <xsl:value-of select="@align"/>
+        <xsl:text>)[</xsl:text>
+    </xsl:if>
+    <xsl:if test="$table_header_bold='yes'">
+        <xsl:text>#strong()</xsl:text>
+    </xsl:if>
     <xsl:text>[</xsl:text>
     <xsl:apply-templates/>
-    <xsl:text>],</xsl:text>
+    <xsl:text>]</xsl:text>
+    <xsl:if test="$table_header_align='yes'">
+        <xsl:text>]</xsl:text>
+    </xsl:if>
+    <xsl:text>,</xsl:text>
 </xsl:template>
 
 <xsl:template match="cm:table_row/cm:table_cell">

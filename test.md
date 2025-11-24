@@ -91,13 +91,12 @@ And mixing:
 
 A table:
 
-|Left header|Center Header|Right header|None header|
-|:----------|:-----------:|-----------:|-----------|
-|123        |     ABC     |         DEF|456        |
-|`123`      |    `ABC`    |       `DEF`|`456`      |
-|*123*      |    *ABC*    |       *DEF*|*456*      |
-|**123**    |   **ABC**   |     **DEF**|**456**    |
-
+|Left header   |Center Header |  Right header|None header   |
+|:-------------|:------------:|-------------:|--------------|
+|12345678901234|ABCDEFGHIJKLMN|ABCDEFGHIJKLMN|12345678901234|
+|`123`         |    `ABC`     |         `DEF`|`456`         |
+|*123*         |    *ABC*     |         *DEF*|*456*         |
+|**123**       |   **ABC**    |       **DEF**|**456**       |
 
 This paragraph uses embedded typst to make this next word
 #strong[strong].

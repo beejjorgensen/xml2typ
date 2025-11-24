@@ -52,7 +52,7 @@ it's generally ignored by `cmark`.
 |Line break     | ✔️ |                                               |
 |Ordered Lists  | ✔️ |                                               |
 |Unordered Lists| ✔️ |                                               |
-|Tables         | ⏳ |Header alignment and bolding                   |
+|Tables         | ✔️ |                                               |
 |Links          | ❌ |                                               |
 |Block quotes   | ❌ |                                               |
 |Images         | ❌ |                                               |
