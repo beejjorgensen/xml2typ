@@ -52,6 +52,12 @@
     <xsl:text>_</xsl:text>
 </xsl:template>
 
+<xsl:template match="cm:strong">
+    <xsl:text>*</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>*</xsl:text>
+</xsl:template>
+
 <xsl:template match="cm:text">
     <xsl:apply-templates/>
 </xsl:template>

@@ -42,6 +42,10 @@ A table:
 |*123*      |    *ABC*    |        *DEF*|
 |**123**    |   **ABC**   |       **DEF**|
 
+
+This paragraph uses embedded typst to make this next word
+#strong[strong].
+
 And a closing paragraph.
 
 # Header 1

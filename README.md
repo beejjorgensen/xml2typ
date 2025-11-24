@@ -27,6 +27,11 @@ demo.
 
 There is no install script. It's up to you where to drop these things.
 
+## Embedded Typst
+
+To a certain extent, you can embed raw Typst into the Markdown since
+it's generally ignored by `cmark`.
+
 ## Checklist
 
 |Task          |State|Notes                                         |
@@ -34,15 +39,16 @@ There is no install script. It's up to you where to drop these things.
 |Header         | ✔️ |                                               |
 |Italics        | ✔️ |                                               |
 |Bold           | ✔️ |                                               |
+|Bold Italics   | ✔️ |                                               |
 |Code           | ✔️ |                                               |
 |Code Block     | ⏳ |No syntax highlighting                         |
-|Bold Italics   | ❌ |                                               |
 |Ordered Lists  | ❌ |                                               |
 |Unordered Lists| ❌ |                                               |
 |Tables         | ❌ |                                               |
 |Footnotes      | ❌ |XML output from `cmark` is broken for footnotes|
 
-## Pandoc does this
+## Pandoc does this, you know...
 
-Yes, but via LaTeX and it's a lot slower. This is an experiment.
+Yes, but via LaTeX and it's a lot slower. This is an experiment for
+funzies.
 
