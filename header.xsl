@@ -44,6 +44,21 @@
 </xsl:text>
 -->
 
+<xsl:text>#set page(
+  width: 8.5in,
+  height: 11in,
+  margin: (x: 1in, y: 1in),
+</xsl:text>
+<xsl:if test="$page_numbers='1'">
+    <xsl:text>numbering: "1",)</xsl:text>
+</xsl:if>
+<xsl:if test="$page_numbers='2'">
+    <xsl:text>numbering: "1 / 1",)</xsl:text>
+</xsl:if>
+<xsl:text>
+)
+</xsl:text>
+
 </xsl:template>
 
 </xsl:stylesheet>

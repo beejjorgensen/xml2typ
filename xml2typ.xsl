@@ -7,8 +7,9 @@
 <xsl:output method="text" encoding="UTF-8" />
 
 
-<xsl:param name="table_header_bold" select="'no'"/>
+<xsl:param name="table_header_bold" select="'yes'"/>
 <xsl:param name="table_header_align" select="'no'"/>
+<xsl:param name="page_numbers" select="'0'"/>
 
 <!-- Repeat a character a number of times -->
 <xsl:template name="repchar">

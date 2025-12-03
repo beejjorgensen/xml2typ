@@ -42,8 +42,14 @@ You can control the behavior or the stylesheet by passing the following
 # Align the headers as specified by the Markdown table cells:
 --stringparam table_header_align yes
 
-# Make table headers bold:
---stringparam table_header_bold yes
+# Make table headers not bold:
+--stringparam table_header_bold no
+
+# Add page numbers to the footer:
+--stringparam page_numbers 1
+
+# Add "1/n"-style page numbers to the footer:
+--stringparam page_numbers 2
 ```
 
 ## Features
