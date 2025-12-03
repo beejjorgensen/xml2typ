@@ -50,10 +50,10 @@
   margin: (x: 1in, y: 1in),
 </xsl:text>
 <xsl:if test="$page_numbers='1'">
-    <xsl:text>numbering: "1",)</xsl:text>
+    <xsl:text>numbering: "1",</xsl:text>
 </xsl:if>
 <xsl:if test="$page_numbers='2'">
-    <xsl:text>numbering: "1 / 1",)</xsl:text>
+    <xsl:text>numbering: "1 / 1",</xsl:text>
 </xsl:if>
 <xsl:text>
 )
