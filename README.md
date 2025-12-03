@@ -33,10 +33,18 @@ Dependencies:
 * `xsltproc`
 * `typst`
 
-## Embedded Typst
+## XSLT Parameters
 
-To a certain extent, you can embed raw Typst into the Markdown since
-it's generally ignored by `cmark`.
+You can control the behavior or the stylesheet by passing the following
+`--stringparam` arguments to `xsltproc`:
+
+```
+# Align the headers as specified by the Markdown table cells:
+--stringparam table_header_align yes
+
+# Make table headers bold:
+--stringparam table_header_bold yes
+```
 
 ## Features
 <!-- ✔️⏳❌ -->

@@ -121,34 +121,41 @@ A table:
 |*123*         |    *ABC*     |         *DEF*|*456*         |
 |**123**       |   **ABC**    |       **DEF**|**456**       |
 
-This paragraph uses embedded Typst to make this next word
-#strong[strong].
-
 And a closing paragraph.
 
 # Header 1
 
-And more embedded Typst to make this: #lorem(30) 
-
-#lorem(30)
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text.
 
 ## Header 2
 
-#lorem(30)
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text.
 
 ### Header 3
 
-#lorem(30)
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text.
 
 #### Header 4
 
-#lorem(30)
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text.
 
 ##### Header 5
 
-#lorem(30)
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text.
 
 ###### Header 6
 
-#lorem(30)
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text. Paragraph text.
+Paragraph text. Paragraph text. Paragraph text.
 

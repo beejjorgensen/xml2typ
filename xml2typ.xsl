@@ -23,6 +23,56 @@
     </xsl:if>
 </xsl:template>
 
+<!-- Escape char with \ -->
+<xsl:template name="escape-char">
+    <xsl:param name="text"/>
+    <xsl:param name="char"/>
+
+    <xsl:choose>
+        <xsl:when test="contains($text, $char)">
+            <xsl:value-of select="substring-before($text, $char)" />
+            <xsl:text>\</xsl:text><xsl:value-of select="$char"/>
+            <xsl:call-template name="escape-char">
+                <xsl:with-param name="text" select="substring-after($text, $char)" />
+                <xsl:with-param name="char" select="$char" />
+            </xsl:call-template>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:value-of select="$text"/>
+        </xsl:otherwise>
+    </xsl:choose>
+</xsl:template>
+
+<!-- Escape any of a set of chars with \ -->
+<xsl:template name="escape-chars">
+    <xsl:param name="text"/>
+    <xsl:param name="chars"/>
+
+    <xsl:choose>
+        <xsl:when test="string-length($chars) = 0">
+            <xsl:value-of select="$text"/>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:variable name="first" select="substring($chars,1,1)"/>
+            <xsl:variable name="rest" select="substring($chars,2)"/>
+
+            <xsl:variable name="partial">
+                <xsl:call-template name="escape-char">
+                    <xsl:with-param name="text" select="$text"/>
+                    <xsl:with-param name="char" select="$first"/>
+                </xsl:call-template>
+            </xsl:variable>
+
+            <xsl:call-template name="escape-chars">
+                <xsl:with-param name="text" select="$partial"/>
+                <xsl:with-param name="chars" select="$rest"/>
+            </xsl:call-template>
+
+        </xsl:otherwise>
+    </xsl:choose>
+
+</xsl:template>
+
 <xsl:include href="header.xsl"/>
 
 <xsl:template match="/cm:document">
@@ -215,6 +265,20 @@
     <xsl:text>)[</xsl:text>
     <xsl:apply-templates/>
     <xsl:text>],</xsl:text>
+</xsl:template>
+
+<!-- Ignore all the HTML because Typst hates it -->
+<xsl:template match="cm:html_inline">
+</xsl:template>
+
+<xsl:template match="cm:html_block">
+</xsl:template>
+
+<xsl:template match="text()[not(parent::cm:code)]">
+    <xsl:call-template name="escape-chars">
+        <xsl:with-param name="text" select="."/>
+        <xsl:with-param name="chars" select="'@#[]'"/>
+    </xsl:call-template>
 </xsl:template>
 
 <!-- Vacuum up all inter-tag whitespace -->
