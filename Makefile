@@ -1,6 +1,11 @@
 NAME=test
 XSLT=xml2typ.xsl
-XSLT_PARAMS=--stringparam page_numbers 2 --stringparam table_header_align yes --stringparam table_header_bold yes
+
+XSLT_PARAMS=--stringparam page_numbers 2\
+	--stringparam table_header_align yes\
+	--stringparam table_header_bold yes\
+	--stringparam light_table yes
+
 CMARK_PARAMS=-e table -e strikethrough -e autolink
 
 .PHONY: all clean pristine

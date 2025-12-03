@@ -10,6 +10,7 @@
 <xsl:param name="table_header_bold" select="'yes'"/>
 <xsl:param name="table_header_align" select="'no'"/>
 <xsl:param name="page_numbers" select="'0'"/>
+<xsl:param name="light_table" select="'no'"/>
 
 <!-- Repeat a character a number of times -->
 <xsl:template name="repchar">

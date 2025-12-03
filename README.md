@@ -50,6 +50,9 @@ You can control the behavior or the stylesheet by passing the following
 
 # Add "1/n"-style page numbers to the footer:
 --stringparam page_numbers 2
+
+# Make tables only have an underline on the header:
+--stringparam light_table yes
 ```
 
 ## Features
