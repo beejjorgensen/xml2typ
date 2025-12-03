@@ -275,7 +275,7 @@
 <xsl:template match="cm:html_block">
 </xsl:template>
 
-<xsl:template match="text()[not(parent::cm:code)]">
+<xsl:template match="text()[not(parent::cm:code) and not(parent::cm:code_block)]">
     <xsl:call-template name="escape-chars">
         <xsl:with-param name="text" select="."/>
         <xsl:with-param name="chars" select="'@#[]'"/>
