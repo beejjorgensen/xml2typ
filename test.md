@@ -12,6 +12,8 @@ There's a horizontal rule below this:
 
 --------
 
+Here are some special characters: #foo[]\() @bar $foo.
+
 And here is a cat image: ![cat image](cat.png "cat image title")
 
 This is **bold**. And this is normal.
