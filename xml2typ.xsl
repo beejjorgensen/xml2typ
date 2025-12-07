@@ -82,6 +82,28 @@
 
 </xsl:text>
 
+<!-- Params -->
+
+<xsl:if test="$page_numbers='1'">
+<xsl:text>
+#set page(numbering: "1")
+</xsl:text>
+</xsl:if>
+
+<xsl:if test="$page_numbers='2'">
+<xsl:text>
+#set page(numbering: "1 / 1")
+</xsl:text>
+</xsl:if>
+
+<xsl:if test="$light_table='yes'">
+#set table(
+  stroke: (x, y) => if y == 0 {
+    (bottom: 0.7pt + black)
+  }
+)
+</xsl:if>
+
 <xsl:call-template name="header-template"/>
 
 <xsl:apply-templates/>
